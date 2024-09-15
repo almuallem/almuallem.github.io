@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Title and subtitle styling */
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 24px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 600px;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Turkey Run State Park - Hiking Trip</h1>
+<h3>Sep 14, 2024</h3>
+<div class="gallery">
+    <!-- Dynamically generated images -->
+    <img src="resized/DSC_0376.JPG" alt="DSC_0376">
+    <img src="resized/DSC_0379.JPG" alt="DSC_0379">
+    <img src="resized/DSC_0392.JPG" alt="DSC_0392">
+    <img src="resized/DSC_0406.JPG" alt="DSC_0406">
+    <img src="resized/DSC_0416.JPG" alt="DSC_0416">
+    <img src="resized/DSC_0435.JPG" alt="DSC_0435">
+    <img src="resized/DSC_0442.JPG" alt="DSC_0442">
+    <img src="resized/DSC_0453.JPG" alt="DSC_0453">
+    <img src="resized/DSC_0454.JPG" alt="DSC_0454">
+    <img src="resized/DSC_0455.JPG" alt="DSC_0455">
+    <img src="resized/DSC_0458.JPG" alt="DSC_0458">
+    <img src="resized/DSC_0473.JPG" alt="DSC_0473">
+    <img src="resized/DSC_0476.JPG" alt="DSC_0476">
+    <img src="resized/DSC_0482.JPG" alt="DSC_0482">
+    <img src="resized/DSC_0487.JPG" alt="DSC_0487">
+    <img src="resized/DSC_0488.JPG" alt="DSC_0488">
+    <img src="resized/DSC_0490.JPG" alt="DSC_0490">
+    <img src="resized/DSC_0491.JPG" alt="DSC_0491">
+    <img src="resized/DSC_0503.JPG" alt="DSC_0503">
+    <img src="resized/DSC_0517.JPG" alt="DSC_0517">
+    <img src="resized/DSC_0530.JPG" alt="DSC_0530">
+    <img src="resized/DSC_0533.JPG" alt="DSC_0533">
+    <img src="resized/DSC_0536.JPG" alt="DSC_0536">
+    <img src="resized/DSC_0539.JPG" alt="DSC_0539">
+    <img src="resized/DSC_0548.JPG" alt="DSC_0548">
+    <img src="resized/DSC_0549.JPG" alt="DSC_0549">
+    <img src="resized/DSC_0550.JPG" alt="DSC_0550">
+    <img src="resized/DSC_0553.JPG" alt="DSC_0553">
+    <img src="resized/DSC_0562.JPG" alt="DSC_0562">
+    <img src="resized/DSC_0568.JPG" alt="DSC_0568">
+    <img src="resized/DSC_0581.JPG" alt="DSC_0581">
+    <img src="resized/DSC_0586.JPG" alt="DSC_0586">
+    <img src="resized/DSC_0602.JPG" alt="DSC_0602">
+    <img src="resized/DSC_0636.JPG" alt="DSC_0636">
+    <img src="resized/DSC_0640.JPG" alt="DSC_0640">
+    <img src="resized/DSC_0653.JPG" alt="DSC_0653">
+</div>
+<h3>By Ali Almuallem</h3>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="">
+</div>
+
+<script>
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            const imgSrc = img.src.replace('resized', 'fullSize');
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            closeLightbox();
+        }
+    });
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
