@@ -1,238 +1,152 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-  <title>Ali Almuallem - Computer Vision | Computational Imaging</title>
-  
-  <meta name="author" content="Ali Almuallem">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        /* Title and subtitle styling */
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #333;
+        }
 
-  <style>
-    .hoverZoomLink {
-      width: 100%;
-      max-width: 100%;
-      transition: transform 0.3s;
-    }
-  
-    .hoverZoomLink:hover {
-      transform: scale(1.1); /* You can adjust the scale factor as needed */
-    }
-  </style>
+        h3 {
+            margin-top: 10px;
+            font-size: 24px;
+            color: #666;
+            font-weight: normal;
+        }
 
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 600px;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Ali Almuallem</name>
-              </p>
-              <p>An Electrical & Computer Engineering Ph.D. student in the <a href = "https://engineering.purdue.edu/ChanGroup/index.html" target="_blank" rel="noopener noreferrer">Intelligent Imaging Lab</a> at <a href = "https://purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue University</a>.
-                
-               
-              
-              </p>
-              <p>I obtained my undergraduate degree in Computer Science at <a href = "https://asu.edu/" target="_blank" rel="noopener noreferrer">Arizona State University</a>, Tempe.</p>
+<h1>Turkey Run State Park - Hiking Trip</h1>
+<h3>Sep 14, 2024</h3>
+<div class="gallery">
+    <!-- Dynamically generated images -->
+    <img src="resized/DSC_0376.JPG" alt="DSC_0376">
+    <img src="resized/DSC_0379.JPG" alt="DSC_0379">
+    <img src="resized/DSC_0392.JPG" alt="DSC_0392">
+    <img src="resized/DSC_0406.JPG" alt="DSC_0406">
+    <img src="resized/DSC_0416.JPG" alt="DSC_0416">
+    <img src="resized/DSC_0435.JPG" alt="DSC_0435">
+    <img src="resized/DSC_0442.JPG" alt="DSC_0442">
+    <img src="resized/DSC_0453.JPG" alt="DSC_0453">
+    <img src="resized/DSC_0454.JPG" alt="DSC_0454">
+    <img src="resized/DSC_0455.JPG" alt="DSC_0455">
+    <img src="resized/DSC_0458.JPG" alt="DSC_0458">
+    <img src="resized/DSC_0473.JPG" alt="DSC_0473">
+    <img src="resized/DSC_0476.JPG" alt="DSC_0476">
+    <img src="resized/DSC_0482.JPG" alt="DSC_0482">
+    <img src="resized/DSC_0487.JPG" alt="DSC_0487">
+    <img src="resized/DSC_0488.JPG" alt="DSC_0488">
+    <img src="resized/DSC_0490.JPG" alt="DSC_0490">
+    <img src="resized/DSC_0491.JPG" alt="DSC_0491">
+    <img src="resized/DSC_0503.JPG" alt="DSC_0503">
+    <img src="resized/DSC_0517.JPG" alt="DSC_0517">
+    <img src="resized/DSC_0530.JPG" alt="DSC_0530">
+    <img src="resized/DSC_0533.JPG" alt="DSC_0533">
+    <img src="resized/DSC_0536.JPG" alt="DSC_0536">
+    <img src="resized/DSC_0539.JPG" alt="DSC_0539">
+    <img src="resized/DSC_0548.JPG" alt="DSC_0548">
+    <img src="resized/DSC_0549.JPG" alt="DSC_0549">
+    <img src="resized/DSC_0550.JPG" alt="DSC_0550">
+    <img src="resized/DSC_0553.JPG" alt="DSC_0553">
+    <img src="resized/DSC_0562.JPG" alt="DSC_0562">
+    <img src="resized/DSC_0568.JPG" alt="DSC_0568">
+    <img src="resized/DSC_0581.JPG" alt="DSC_0581">
+    <img src="resized/DSC_0586.JPG" alt="DSC_0586">
+    <img src="resized/DSC_0602.JPG" alt="DSC_0602">
+    <img src="resized/DSC_0636.JPG" alt="DSC_0636">
+    <img src="resized/DSC_0640.JPG" alt="DSC_0640">
+    <img src="resized/DSC_0653.JPG" alt="DSC_0653">
+</div>
+<h3>By Ali Almuallem</h3>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="">
+</div>
 
-              
-              <p style="text-align:center">
-                Email: last_name.first_name@gmail.com &nbsp/&nbsp
-                <a href="https://drive.google.com/file/d/1QVxGnLWXLcCRkarRlnOp5p-cH9aG-dTd/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a> &nbsp/&nbsp
-                <a href="https://twitter.com/almuallem_ali" target="_blank" rel="noopener noreferrer">Twitter</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/almuallem/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/Ali_Almuallem_Colored.jpg" class="hoverZoomLink" onmouseover="this.src='images/Ali_Almuallem_BW.jpg'" onmouseout="this.src='images/Ali_Almuallem_Colored.jpg'">
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            
-              <heading>Research Interests</heading>
-              <p>
-                I'm interested in Computational Photography/Imaging, Computer Vision, and deep learning applications in these domains. Within these fields, I have a special interest in Implicit Neural Representations (INRs).
-              </p>
+<script>
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
 
-              <p>I currently work on <strong>wavefront estimation</strong> (a.k.a. phase retrieval) problems for aberrations corrections.</p>
-              <br>
-              <br>
-              
-            </td>
-          </tr>
-        </tbody></table>
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            const imgSrc = img.src.replace('resized', 'fullSize');
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+        });
+    });
 
-        
-        
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            closeLightbox();
+        }
+    });
 
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
-          
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+</script>
 
-            <heading>Research Expereinces</heading>
-              
-          <tr>
-
-          
-
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              
-              <div class="one">
-                  <img src='images/sonar_project.jpg' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              
-                <papertitle>INSAS: Implicit Neural Synthetic Aperture Sonar, using INRs to reconstruct sonar images from sparse measurements
-                </papertitle>
-              
-              <br>
-              <strong>Ali Almuallem</strong> <br>
-              <em>An undergraduate class project</em>, 2022-2023
-              <br>
-              <a href="data/Class_project.pdf" target="_blank" rel="noopener noreferrer">Project paper.</a>
-              <p>
-             Using an INR to reconstruct circular SAS images from sparse measurements.
-              </p>
-            </td>
-
-          
-          </tr>
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                  <img src='images/batched_ray.jpg' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://furi.engineering.asu.edu/participant/almuallem-ali/" target="_blank" rel="noopener noreferrer">
-                <papertitle>Using Batched Rays to Enable Higher Resolution Reconstruction of Computed Tomography
-                </papertitle>
-              </a>
-              <br>
-              <strong>Ali Almuallem</strong>,
-              <a href="https://scholar.google.com/citations?user=GVIPttwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Albert Reed</a>,
-              <a href="https://scholar.google.com/citations?user=DEfu2GoAAAAJ" target="_blank" rel="noopener noreferrer">Suren Jayasuriya</a>
-              <br>
-              <em>Fulton Undergraduate Research Initiative (FURI)</em>, 2022. 
-              <br>
-              <a href="https://furi.engineering.asu.edu/participant/almuallem-ali/" target="_blank" rel="noopener noreferrer">Project page</a>
-              /
-              <a href="https://furi.engineering.asu.edu/wp-content/uploads/2022/04/Ali-Almuallem-1.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
-              <p></p>
-              <p>
-             We proposed a method to overcome the memory bottlenick when working with INRs for Computed Tomography reconstruction tasks.
-              </p>
-            </td>
-
-            
-          </tr>
-          
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                  <img src='images/freq_based.jpg' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              
-                <papertitle>Frequency-based Implicit Neural Rendering
-                </papertitle>
-              
-              <br>
-              <strong>Ali Almuallem</strong>
-              <br>
-              <em>Summer Research Project</em>, 2022 - 2023 
-              <br>
-              <p>
-             A summer research project with Prof. <a href="https://scholar.google.com/citations?user=IQSbom0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Wolfgang Heidrich</a> and <a href="https://kaust.edu.sa" target="_blank" rel="noopener noreferrer">KAUST</a>
-              </p>
-            </td>
-
-            
-          </tr>
-
-        </tbody></table>
-
-				
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <heading>Latest Updates</heading>
-                <p>- <strong>2023, AUG:</strong> I joined the <a href="https://engineering.purdue.edu/ChanGroup/index.html" target="_blank" rel="noopener noreferrer">Intelligent Imaging Lab</a> at Purdue University as a doctoral student with Prof. Stanley H. Chan.</p>
-                <p>- <strong>2023, APR:</strong> I was awarded the <a href="https://issc.asu.edu/inspiring-global-citizens-award?utm_campaign=ASU_PESC_ECOMM+61477+ISSC+Inspiring+Global+Citizens+Award+email+(ISSC+list)+-+20230316_QS_6740593&utm_medium=email&utm_source=ASU_PESC_SFMCE&ecd26=&ecd28=&ecd38=&ecd39=&ecd40=0030W00003m6HZDQA2&ecd42=7275913&ecd73=163193107" target="_blank" rel="noopener noreferrer">Inspiring Global Citizen Award</a> by ASU for the graduating class of spring 2023.</p>
-                <p>- <strong>2022, DEC:</strong> I was selected for and was awarded the <a href="https://furi.engineering.asu.edu/" target="_blank" rel="noopener noreferrer">FURI</a> research funding for spring 2023.</p>
-                <p>- <strong>2022, MAY:</strong> I started a research internship with Prof. <a href="https://vccimaging.org/People/heidriw/" target="_blank" rel="noopener noreferrer">Wolfgang Heidrich.</a></p>
-                <p>- <strong>2022, APR:</strong> I presented my work on batched rays CT in the FURI symposium. <a href="https://furi.engineering.asu.edu/participant/almuallem-ali/" target="_blank" rel="noopener noreferrer">Project</a> | <a href="https://media-exp1.licdn.com/dms/image/C5622AQGIf7G_Yw5JkQ/feedshare-shrink_1280/0/1651552673279?e=1671062400&v=beta&t=sfRJ7EFogQVkkvsE1HX36nn0LMqqwQWN_9afIp3idwY" target="_blank" rel="noopener noreferrer">Image</a></p>
-                <p>- <strong>2021, DEC:</strong> I was selected for and was awareded the <a href="https://furi.engineering.asu.edu/" target="_blank" rel="noopener noreferrer">FURI</a> research funding for spring 2022.</p>              
-                <p>- <strong>2021, AUG:</strong> I joined the <a href="https://web.asu.edu/imaging-lyceum/home" target="_blank" rel="noopener noreferrer">Imaging Lyceum Lab</a> at ASU to work with Prof. <a href="https://web.asu.edu/imaging-lyceum/team" target="_blank" rel="noopener noreferrer">Suren Jayasuriya</a></p>  
-                <p>- <strong>2021, JUN:</strong> I was selected to participate in the SSI summer research internship with Prof. <a href="https://peterwonka.net/" target="_blank" rel="noopener noreferrer">Peter Wonka</a> at <a href="https://kaust.edu.sa" target="_blank" rel="noopener noreferrer">KAUST.</a></p>                
-                <p>- <strong>2020, AUG:</strong> I joined Arizona State University for my undergraduate degree in Computer Science.            
-                <p>- <strong>2019, AUG:</strong> I joined Seattle Central College to finish my math, physics, and basic general classes.                
-              </td>
-            </tr>
-            </tbody></table>
-          
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-              <tr>
-                <td>
-                  <heading>Notable Classes</heading>
-                  <p>- EEE598: <strong>Physics-based Computer Vision</strong> (Grad-level)</p>
-                  <p>- EEE598: <strong>Remote Sensing and Synthetic Aperture Imaging</strong> (Grad-level)</p>
-                  <p>- CSE499: <strong>Independent research </strong> in Computed Tomography reconstruction using Implicit Neural Representations.</p>
-                  <p>- CSE494/570: <strong>Advanced Computer Graphics</strong> (Grad-level).</p>
-                </td>
-              </tr>
-              </tbody></table>
-            
-              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-                <tr>
-                  <td>
-                    <heading>Languages</heading>
-                    <p>- Python</p>
-                    <p>- Java</p>
-                    <p>- C++.</p>
-                    <p>- Familiar with: HTML, Javascript, MATLAB, and C.</p>
-                  </td>
-                </tr>
-                </tbody></table>
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <heading>Courses</heading>
-                <p>- First Principles of Computer Vision - Specialization, <a href="https://www.coursera.org/specializations/firstprinciplesofcomputervision" target="_blank" rel="noopener noreferrer">Columbia University</a></p>
-                <p>- Artificial Intelligence with Python Nanodegree, <a href="https://www.udacity.com" target="_blank" rel="noopener noreferrer">Udacity</a></p>
-              </td>
-            </tr>
-            </tbody></table>
-
-            <img style="width:50%;max-width:50%" alt="Hiking Kilimanjaro, Tanzania. June 2019 " src="images/Kilimanjaro-resized.jpeg" class="hoverZoomLink">
-            <p>~3500M ASL, Mount Kilimanjaro, Tanzania . June 2019. (c) Ali Almuallem.</p>
-
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Website theme by <a href="https://github.com/jonbarron/jonbarron_website" target="_blank" rel="noopener noreferrer">Jon Barron</a>
-               
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
 </body>
-
 </html>
