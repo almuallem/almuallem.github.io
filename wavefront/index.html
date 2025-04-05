@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Wavefront Estimation From a Single Measurement: Uniqueness and Algorithms</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Wavefront Estimation From a Single Measurement: Uniqueness and Algorithms</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://web.ics.purdue.edu/~nchimitt/index.html" target="_blank">Nicholas Chimitt</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://almuallem.github.io" target="_blank">Ali Almuallem</a><sup></sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Qi Quo</a><sup></sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://engineering.purdue.edu/ChanGroup/stanleychan.html" target="_blank">Stanley H. Chan</a><sup></sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Purdue University<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <img src="images/main_figure.png" alt="Main Figure">
+      <h2 class="subtitle has-text-centered">
+        Overview of adaptive optics (AO) and the position of our method among hardware and alternative computational methods for wavefront estimation.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Wavefront estimation is an essential component of
+adaptive optics where the goal is to recover the underlying phase
+from its Fourier magnitude. While this may sound identical to
+classical phase retrieval problems, wavefront estimation faces
+more strict requirements regarding uniqueness because the
+adaptive optics system needs a unique phase to compensate for
+the distorted wavefront. Existing real-time wavefront estimation
+methodologies are dominated by sensing via specialized optical
+hardware due to their high speed, but they often have a low
+spatial resolution. It has been suggested that if a computational
+method could perform fast and accurate wavefront estimation
+with a single measurement, one can possibly do real-time passive
+estimation and compensation, hence opening the door to a new
+generation of medical and defense applications.
+In this paper, we tackle the wavefront estimation problem by
+observing that the non-uniqueness is related to the geometry
+of the pupil shape. By analyzing the source of ambiguities and
+by breaking the symmetry, we present a joint optics-algorithm
+approach by co-designing the shape of the pupil and the recon-
+struction neural network. Using our proposed lightweight neural
+network, we demonstrate wavefront estimation of a phase of
+size 128 × 128 at 5, 200 frames per second on a CPU computer,
+achieving an average Strehl ratio up to 0.98 in the noiseless case.
+We additionally test our method on real measurements using a
+spatial light modulator
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Wrong estimage, what's the big deal?</h2>
+            <div class="columns">
+                <div class="column">
+                  <img src="images/toy_01.png" alt="Weight distance correlation" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                  Toy example illustrating the impact of pupil geometry on recovery. Symmetrical pupils like a circle have more than one local minimum.
+
+                </div>
+    
+                <div class="column">
+                  <img src="images/wrong-estimate.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                  Estimating the wrong phase will result in corrupting the wavefront (and therefore the captured image) further instead of correcting it.
+                </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Evaluation on Real Data</h2>
+            <div class="level-set has-text-justified">
+
+            </div>
+            
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <img src="pix/slm_results/psf1_label.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-bottom: 10px;" />
+                    <div class="columns is-centered is-mobile">
+                        <div class="column is-half">
+                            <img src="pix/slm_results/realSLM_gt1_label.png" alt="Ground Truth" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                        </div>
+                        <div class="column is-half">
+                            <img src="pix/slm_results/realSLM_recover1_label.png" alt="Recovered" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                        </div>
+                    </div>
+                     <img src="pix/slm_results/realSLM_coeff1-1.png" alt="Coefficient Image" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-top: 10px;" />
+
+                </div>
+  
+              <div class="column has-text-centered">
+                <img src="pix/slm_results/psf2_label.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-bottom: 10px;" />
+                <div class="columns is-centered is-mobile">
+                    <div class="column is-half">
+                        <img src="pix/slm_results/realSLM_gt3_label.png" alt="Ground Truth" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                    </div>
+                    <div class="column is-half">
+                        <img src="pix/slm_results/realSLM_recover2_label.png" alt="Recovered" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                    </div>
+                </div>
+                <img src="pix/slm_results/realSLM_coeff2-1.png" alt="Coefficient Image" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-top: 10px;" />
+
+            </div>
+
+              <!-- PSF3 image with two half-column images below -->
+            <!-- PSF3 image with two half-column images below and a full-width image beneath -->
+            <div class="column has-text-centered">
+                <img src="pix/slm_results/psf3_label.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-bottom: 10px;" />
+                <div class="columns is-centered is-mobile">
+                    <div class="column is-half">
+                        <img src="pix/slm_results/realSLM_gt3_label.png" alt="Ground Truth" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                    </div>
+                    <div class="column is-half">
+                        <img src="pix/slm_results/realSLM_recover3_label.png" alt="Recovered" class="blend-img-background center-image" style="max-width: 85%; height: auto;" />
+                    </div>
+                </div>
+                <img src="pix/slm_results/realSLM_coeff3-1.png" alt="Coefficient Image" class="blend-img-background center-image" style="max-width: 85%; height: auto; margin-top: 10px;" />
+            </div>
+
+            </div>
+            Evaluation on <em><strong>real data</strong></em> [Top] Measured PSFs. [Middle]
+            SLM phase pattern (left) and estimated phase (right) for each case. [Bottom]
+            Basis coefficient comparison (blue as ground truth, red as recovered). All
+            cases shown (a-c) are validation data. Here we use a version of our MLPs (MLP1 method), hence
+            runtime is ∼ 3700 Hz which is applicable for real-time applications.
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Video carousel with two images, second one centered -->
+<section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Optical Setup</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="images/optical_setup1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="images/optical_setup2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="images/optical_setup3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-image1">
+            <img src="pix/setup_new.jpg" alt="Optical Setup Image" style="width: 100%; height: auto; margin-bottom: 10px;">
+            <div style="display: flex; justify-content: center;">
+              <img src="pix/image_zoom_camera.jpg" alt="Camera Zoom" style="width: 20%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End video carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ChimittWavefront,
+        title={Wavefront Estimation From a Single Measurement: Uniqueness and Algorithms},
+        author={Chimitt, Nicholas and Almuallem, Ali and Gui, Qi and Chan, Stanley H.},
+        journal={arXiv preprint arXiv:########},
+        year={2025}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
